@@ -3,13 +3,17 @@ Project Submission for Getting and Cleaning Data Course Project
 ===================================
 This CodeBook details the script used to create two tidy data files: combinedtidy.csv and tidy2.csv. The data collected by the original researchers were process and cleaned for noise and made available here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
+=========================
 STUDY DESIGN & BACKGROUND
+=========================
 This is an excerpt for the study design from the original authors' README file. 
 	"The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 	The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. "
 
+=========================
 ORIGINAL DATA
+=========================
 The original data were spread across multiple files. The measurement data for the test and training observations were in the 'test/X_test.txt' and 'train/X_train.txt' respectively. Labels for the data sets were in the 'features.txt' file. Subjects IDs (1-30: for all thirty participants) for the observations were in the 'train/subject_train.txt' and 'test/subject_test.txt' files. The activity code (1-6) for each observation were on the 'test/y_test.txt' and 'data/train/y_train.txt' files. The labels for the activity codes are in the 'activity_labels.txt' file. These data files were used, merged and filtered to create the two tidy data sets. 
 
 File descriptions from original authors' README(only files used by script are listed here):
@@ -22,8 +26,10 @@ File descriptions from original authors' README(only files used by script are li
 	- 'test/y_test.txt': Test labels.
 	The following files are available for the train and test data. Their descriptions are equivalent. 
 	- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-	
+
+=========================	
 PROCESSED DATA
+=========================
 The following are the steps to create the two tidy data files using the above listed files. 
 
 creation of 'combinedtidy.csv' by run_analysis.R script 
@@ -53,9 +59,9 @@ creation of 'combinedtidy.csv' by run_analysis.R script
 4.  Writes 'tidy2.csv' file to output directory. Will create directory if it does not exist. The resulting data file contains a table with the summary (mean) of the variables by subject by activity for the variables listed below.
 
 
-
+=========================
 List of variables included in tidy data files:
-
+=========================
 (Variable Name)	: short description / additional description
 
 subject	: ID of study participant 
