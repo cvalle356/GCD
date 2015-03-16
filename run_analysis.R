@@ -11,7 +11,6 @@
 #5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-
 ##reads all data
 feat <- "~/data/features.txt"
 feat561<- read.table(feat)
@@ -123,12 +122,13 @@ colnames(alldata1)<-gsub("--","-",names(alldata1))
 
 #writes combined data
 if(!file.exists("~/output")){dir.create("~/output")}
-write.csv(alldata1, file="~/output/combinedtidy.csv")
+write.table(alldata1, file="~/output/combinedtidy.txt", row.name=FALSE)
 
 #2nd tidy data set summary
 sumdata<-alldata1
 tbl_df(sumdata)
 
+# DPLYR grouping is applied
 sumdata <- group_by(sumdata ,subject, activitylabel)
 
 sumdata1<-summarise_each(sumdata,funs(mean))
@@ -136,4 +136,4 @@ sumdata1<-select(sumdata1, -group)
 
 #writes 2nd tidy data
 if(!file.exists("~/output")){dir.create("~/output")}
-write.csv(sumdata1, file="~/output/tidy2.csv")
+write.table(sumdata1, file="~/output/tidy2.txt", row.name=FALSE)
