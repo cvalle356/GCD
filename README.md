@@ -1,7 +1,7 @@
 # GCDproject
-Getting and Cleaning Data Project files 
+
 ===================================
-Project Submission for Getting and Cleaning Data Course Project
+Project Submission for Getting and Cleaning Data Course
 ===================================
 
 This describes am R script designed to create a tidy data set from a study that collected data from "wearable" technology to study participants readings during certain activity. The data collected by the original researchers were process and cleaned for noise and made available here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. The README file contains the description of the study and what is contained in the zip file. Although these (link) data have been processed, for our purposes we will call them the raw data. The script will produce two tidy data files from the original data.
