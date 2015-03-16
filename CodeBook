@@ -25,9 +25,9 @@ File descriptions from original authors' README(only files used by script are li
 	
 PROCESSED DATA
 The following are the steps to create the two tidy data files using the above listed files. 
----------------------------
+
 creation of 'combinedtidy.csv' by run_analysis.R script 
----------------------------
+
 1. reads all data files listed above and creates data frames using the files
 2. Loads package dplyer
 3. Creates a third variable for the features data frame by combining the row index and feature name from the feature list. This is done to avoid issues with repeat variable names
@@ -44,9 +44,9 @@ creation of 'combinedtidy.csv' by run_analysis.R script
 14. Cleans up variable names for remaining measure/feature variables. Used 'feature_info.txt' to interpret variable names/codes. Used gsubs to replace coding pattern with descriptive pattern.
 15. Writes 'combinedtidy.csv' file to output directory. Will create directory if it does not exist. The resulting data file contains a table with the variables listed below.
 
----------------------------
+
 creation of 'combinedtidy.csv' by run_analysis.R script 
----------------------------
+
 1. Uses the resulting data frame (combining test and train data) from the above listed steps.
 2. Groups the row/observation by 'subjects' and 'activity' using the DPLYR group_by() function.
 3. Collapses the observations by subject by activity and creates new rows based on the mean using each measure/feature.
@@ -55,9 +55,9 @@ creation of 'combinedtidy.csv' by run_analysis.R script
 
 
 List of variables included in tidy data files:
---------------------------------------------
+
 (Variable Name)	: short description / additional description
---------------------------------------------
+
 subject	: ID of study participant 
 group	: whether the observation was from the test or train data set
 activitylabel	: descriptive label of activity performed during the measurements
